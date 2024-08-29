@@ -32,7 +32,7 @@ module.exports = (env, argv) => {
           use: ['babel-loader']
         },
         {
-          test: /\.(s[ac]ss|css)$/, // Matches .scss, .sass, and .css files
+          test: /\.(s[ac]ss|css)$/,
           use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader']
         },
         {
