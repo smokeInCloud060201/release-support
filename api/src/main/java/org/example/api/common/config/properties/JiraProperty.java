@@ -10,5 +10,22 @@ import org.springframework.stereotype.Component;
 @Getter
 @Setter
 public class JiraProperty {
-    private String token;
+
+    private User user;
+    private Project project;
+
+
+    @Getter
+    @Setter
+    public static class User {
+        private String token;
+        private String email;
+    }
+
+    @Getter
+    @Setter
+    public static class Project {
+        private String domain;
+        private String key;
+    }
 }

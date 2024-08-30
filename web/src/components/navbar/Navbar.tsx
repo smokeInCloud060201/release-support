@@ -16,13 +16,11 @@ const Navbar: React.FC = () => {
     }
   ]
 
-  console.log(activeTab)
-
   const RenderNavbar: React.FC = () => {
     return (
       <ul className='flex justify-start flex-col h-full items-start gap-2'>
         {navbarDef.map((item, index) => (
-          <li key={index} className='py-2'>
+          <li key={index} className={`w-full rounded p-4 ${activeTab === index ? 'active-tab' : ''}`}>
             <button
               onClick={() => {
                 setActiveTab(index)
